@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/rlOuter">
+    
+	<ImageView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/rule1"
+	    android:scaleType="fitXY"
+	    android:adjustViewBounds="true"
+	    android:background="@android:color/transparent"
+	    android:layout_above="@+id/split"
+	    android:clickable="false"/>
+    
+	<ImageView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/rule2"
+	    android:scaleType="fitXY"
+	    android:adjustViewBounds="true"
+	    android:background="@android:color/transparent"
+	    android:layout_toRightOf="@+id/split"
+	    android:layout_centerVertical="true"
+	    android:clickable="false"/>
+    
+	<ImageView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/rule3"
+	    android:id="@+id/ivRule3"
+	    android:scaleType="fitXY"
+	    android:adjustViewBounds="true"
+	    android:background="@android:color/transparent"
+	    android:layout_below="@+id/split"
+	    android:clickable="false"/>
+    
+	<ImageView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/rule4"
+	    android:scaleType="fitXY"
+	    android:adjustViewBounds="true"
+	    android:background="@android:color/transparent"
+	    android:layout_below="@+id/ivRule3"
+	    android:clickable="false"/>
+    
+    <ImageView android:id="@+id/split"
+        android:layout_width="100dp" 
+        android:layout_height="100dp"
+        android:background="@drawable/outline"
+        android:layout_centerInParent="true"
+	    android:clickable="false"/>
+    
+    
+</RelativeLayout>

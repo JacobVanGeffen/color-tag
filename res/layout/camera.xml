@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextureView
+        android:id="@+id/tvCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlColorBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp" >
+
+        <ImageView
+            android:id="@+id/ivColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBestPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="30dp" >
+
+        <ImageView
+            android:id="@+id/ivPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/outline" />
+
+        <ImageView
+            android:id="@+id/ivBestPicText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/best_pic" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ivShotBox"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/outline" />
+
+    
+        <!-- android:background="#68000000" -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvScore"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:textColor="#a0ffffff"
+        android:text="asdfasdfadsafsd"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:textColor="#a0ffffff"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        android:textSize="30sp" />
+
+</RelativeLayout>

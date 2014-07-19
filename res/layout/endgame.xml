@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llOuter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:paddingTop="15dp"
+        android:id="@+id/tvFinalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlBestPic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp" >
+
+        <ImageView
+            android:id="@+id/ivPic"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/outline_rounded" />
+    </RelativeLayout>
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/tvWaiting"
+        android:layout_gravity="center_horizontal"
+        android:text="Waiting for\nother players..."
+        android:textColor="@android:color/white"
+        android:textSize="30sp"/>
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/tvHigh"
+        android:layout_gravity="center_horizontal"
+        android:text="High Scores"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"/>
+    
+    <ImageView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/ivResult"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        />
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlOuter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/title" />
+
+    <RelativeLayout
+        android:id="@+id/rlInner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ivTitle"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <View
+            android:id="@+id/center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b8000000"
+        android:visibility="invisible"
+        android:id="@+id/rlHostInfo">
+        
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/split">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Name: "
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+            <EditText android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/split">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Length (mins): "
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"/>
+            <NumberPicker android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/npTime"/>
+        </LinearLayout>
+        
+        <View android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/split"/>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

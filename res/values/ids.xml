@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="gbHost" type="id"></item>
+    <item name="gbSingle" type="id"></item>
+    <item name="gbMatchMaker" type="id"></item>
+    <item name="gbRush" type="id"></item>
+    <item name="gbClassic" type="id"></item>
+    <item name="gbStart" type="id"></item>
+
+</resources>
