@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,7 +20,6 @@ public class GameButton extends RelativeLayout {
 
 	private Context context;
 	private String name, uid;
-	private ImageView clickHandler;
 
 	public GameButton(Context context){
 		this(context, "name", "1");
@@ -45,16 +43,6 @@ public class GameButton extends RelativeLayout {
 		this(context, name, uid);
 		setId(id);
 	}
-
-	/*@Override
-	public void setOnClickListener(OnClickListener l) {
-		clickHandler.setOnClickListener(l);
-	}
-	
-	@Override
-	public void setId(int id) {
-		clickHandler.setId(id);
-	}*/
 	
 	@SuppressWarnings("deprecation")
 	private void setupGUI() {

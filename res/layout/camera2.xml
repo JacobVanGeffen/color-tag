@@ -61,6 +61,23 @@
         android:layout_height="100dp"
         android:layout_centerInParent="true"
         android:background="@drawable/outline_rounded" />
+    
+    <ImageButton
+        android:id="@+id/ibEndGame"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/fastforward_idle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+    
+    <ImageView 
+        android:id="@+id/ivFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:visibility="invisible"
+        />
 
     <!-- <ImageButton
         android:id="@+id/ivTakePic"

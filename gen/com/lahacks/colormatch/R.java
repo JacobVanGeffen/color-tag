@@ -29,21 +29,24 @@ public final class R {
         public static final int best_pic=0x7f020000;
         public static final int black=0x7f020001;
         public static final int button_back=0x7f020002;
-        public static final int gradient_round_color=0x7f020003;
-        public static final int gradient_round_color_idle=0x7f020004;
-        public static final int gradient_round_color_pressed=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int logo=0x7f020007;
-        public static final int lost=0x7f020008;
-        public static final int outline=0x7f020009;
-        public static final int outline_rounded=0x7f02000a;
-        public static final int rule1=0x7f02000b;
-        public static final int rule2=0x7f02000c;
-        public static final int rule3=0x7f02000d;
-        public static final int rule4=0x7f02000e;
-        public static final int solid_round_color=0x7f02000f;
-        public static final int title=0x7f020010;
-        public static final int won=0x7f020011;
+        public static final int fastforward=0x7f020003;
+        public static final int fastforward_clicked=0x7f020004;
+        public static final int fastforward_idle=0x7f020005;
+        public static final int gradient_round_color=0x7f020006;
+        public static final int gradient_round_color_idle=0x7f020007;
+        public static final int gradient_round_color_pressed=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int logo=0x7f02000a;
+        public static final int lost=0x7f02000b;
+        public static final int outline=0x7f02000c;
+        public static final int outline_rounded=0x7f02000d;
+        public static final int rule1=0x7f02000e;
+        public static final int rule2=0x7f02000f;
+        public static final int rule3=0x7f020010;
+        public static final int rule4=0x7f020011;
+        public static final int solid_round_color=0x7f020012;
+        public static final int title=0x7f020013;
+        public static final int won=0x7f020014;
     }
     public static final class id {
         public static final int center=0x7f070011;
@@ -54,14 +57,16 @@ public final class R {
         public static final int gbRush=0x7f070003;
         public static final int gbSingle=0x7f070001;
         public static final int gbStart=0x7f070005;
+        public static final int ibEndGame=0x7f07001b;
         public static final int ivBestPicText=0x7f070017;
         public static final int ivColor=0x7f070014;
+        public static final int ivFeedback=0x7f07001c;
         public static final int ivPic=0x7f070016;
-        public static final int ivResult=0x7f07001f;
-        public static final int ivRule3=0x7f070020;
+        public static final int ivResult=0x7f070021;
+        public static final int ivRule3=0x7f070022;
         public static final int ivShotBox=0x7f070018;
         public static final int ivTitle=0x7f070007;
-        public static final int llOuter=0x7f07001b;
+        public static final int llOuter=0x7f07001d;
         public static final int llScrollGames=0x7f07000b;
         public static final int npTime=0x7f070010;
         public static final int rlBestPic=0x7f070015;
@@ -72,12 +77,12 @@ public final class R {
         public static final int split=0x7f07000e;
         public static final int svGames=0x7f070009;
         public static final int tvCamera=0x7f070012;
-        public static final int tvFinalScore=0x7f07001c;
-        public static final int tvHigh=0x7f07001e;
+        public static final int tvFinalScore=0x7f07001e;
+        public static final int tvHigh=0x7f070020;
         public static final int tvScore=0x7f07001a;
         public static final int tvTime=0x7f070019;
         public static final int tvTitle=0x7f070008;
-        public static final int tvWaiting=0x7f07001d;
+        public static final int tvWaiting=0x7f07001f;
         public static final int vBoarder=0x7f07000a;
     }
     public static final class layout {

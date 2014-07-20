@@ -22,6 +22,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
@@ -59,8 +60,8 @@ public class CameraActivity extends Activity {
 		((TextView)findViewById(R.id.tvScore)).setTypeface(Typeface.createFromAsset(getAssets(), "Roboto-Black.ttf"));
 		((TextView)findViewById(R.id.tvTime)).setTypeface(Typeface.createFromAsset(getAssets(), "Roboto-Black.ttf"));
 		tvCamera.setSurfaceTextureListener(surfaceListener);
-		tvCamera.setOnClickListener(onClickListener);
-		colorBox.setOnClickListener(onClickListener);
+		tvCamera.setOnClickListener(takePicListener);
+		colorBox.setOnClickListener(takePicListener);
 		session = new GameSession(length, new GameSession.CountDownTimerService() {
 			public void onTick(long timeLeft) {
 				if(mode==GameMode.RUSH)
@@ -93,6 +94,7 @@ public class CameraActivity extends Activity {
 		super.onResume();
 	}
 	
+	@SuppressWarnings("unused")
 	private Animation getMinimizeAnimation(){
 		AnimationSet ret = new AnimationSet(true);
 		ret.addAnimation(new TranslateAnimation(0, 50, 0, 50));
@@ -100,10 +102,18 @@ public class CameraActivity extends Activity {
 		return ret;
 	}
 	
+	@SuppressWarnings("deprecation")
 	private void setIvColorBackground(){
 		Drawable ivColorBackground = getResources().getDrawable(R.drawable.solid_round_color);
 		ivColorBackground.setColorFilter(color, Mode.MULTIPLY);
 		findViewById(R.id.ivColor).setBackgroundDrawable(ivColorBackground);
+	}
+	
+	private void giveFeedback(boolean good){
+		View feedback = findViewById(R.id.ivFeedback);
+		feedback.setVisibility(View.VISIBLE);
+		feedback.setBackgroundColor(getResources().getColor(good ? R.color.good : R.color.bad));
+		findViewById(R.id.ivFeedback).startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_alpha));
 	}
 	
 	private void handleScore(double score, Bitmap bitmap){
@@ -111,6 +121,7 @@ public class CameraActivity extends Activity {
 		case MATCH_MAKER:
 			color = ColorUtil.getRandomColor();
 		case MATCH_MAKER_V2: 
+			giveFeedback(ColorUtil.isMatch(score));
 			if(ColorUtil.isMatch(score)){
 				color = ColorUtil.getRandomColor();
 				setIvColorBackground();
@@ -135,6 +146,7 @@ public class CameraActivity extends Activity {
 			}
 			break;
 		case RUSH:
+			giveFeedback(ColorUtil.isMatch(score));
 			if(ColorUtil.isMatch(score)){
 				bestScore++;
 				((ImageView) findViewById(R.id.ivPic))
@@ -185,7 +197,7 @@ public class CameraActivity extends Activity {
 
 	private static boolean isLoading = false;
 
-	private OnClickListener onClickListener = 
+	private OnClickListener takePicListener = 
 		new OnClickListener() {
 			public void onClick(View v) {
 				if (isLoading || session.isFinished())

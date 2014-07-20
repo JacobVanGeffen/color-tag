@@ -10,13 +10,11 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
@@ -48,7 +46,8 @@ public class MainActivity extends Activity {
 		findViewById(R.id.rlOuter).setOnClickListener(getOnClickListener());
 	}
 	
-	/*private void setupGUI() {
+	@SuppressWarnings("unused")
+	private void setupGUI() {
 		background = ColorUtil.getDarkColor();
 		findViewById(R.id.rlOuter).setBackgroundColor(background);
 		
@@ -87,7 +86,7 @@ public class MainActivity extends Activity {
 		((RelativeLayout.LayoutParams)start.getLayoutParams()).addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 		((ViewGroup)findViewById(R.id.rlHostInfo)).addView(start);
 		start.setOnClickListener(getOnClickListener());
-	}*/
+	}
 	
 	private void setupGUI2(){
 		background = ColorUtil.getDarkColor();
